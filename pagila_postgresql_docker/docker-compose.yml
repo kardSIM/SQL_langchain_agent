@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  pagiladb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: 'pagiladb'
+    ports:
+      - '65001:5432'
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres16'
+      POSTGRES_DB: 'postgres'
+      PGDATA: '/postgres/16/data'
+      SERVER_NAME: 'pg_pagila'
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d/
+      - ./data:/postgres/16/data
+
+
+#CREATE ROLE youssef LOGIN PASSWORD '22139111';
+#GRANT pagila_dba TO youssef;
