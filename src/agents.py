@@ -21,7 +21,6 @@ def create_SQL_agent(db, groq_api):
         agent_kwargs={
             'prefix':template.PREFIX,
             'format_instructions': template.FORMAT_INSTRUCTIONS,
-            'suffix': template.SUFFIX
         }    
     )
     return agent

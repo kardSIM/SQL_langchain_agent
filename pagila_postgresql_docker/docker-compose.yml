@@ -18,6 +18,4 @@ services:
       - ./init:/docker-entrypoint-initdb.d/
       - ./data:/postgres/16/data
 
-
-#CREATE ROLE youssef LOGIN PASSWORD '22139111';
-#GRANT pagila_dba TO youssef;
+      

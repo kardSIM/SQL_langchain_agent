@@ -1,55 +1,93 @@
 # SQL_langchain_agent
 ## Description 
-The LangChain SQL Agent enables intuitive interaction with SQL databases by translating natural language queries into SQL statements, simplifying data retrieval and processing for users without SQL expertise.
+This __LangChain SQL Agent__ enables __intuitive interaction__ with SQL databases by __translating__ natural language queries into SQL statements, simplifying __data retrieval__ and __processing__ for users without SQL expertise.
 
 ## Key Features 
-This agent Utilize the Llama3-8B LLM model as its reasoning engine and as    generator, enhancing the agent's ability to understand and process complex natural language queries.
+This agent Utilize the __Llama3-8B__ LLM model as its __reasoning engine__ and as __language generator__, enhancing the agent's ability to __understand__ and __process__ complex natural language queries.
 
-it also comes pre-loaded with two robust tools:
-SQLDatabaseToolkit: Facilitates seamless query translation and efficient data retrieval from SQL databases.
-PythonREPLTool: Enables running Python code to process data, allowing for advanced data manipulation and analysis.
+it also comes __pre-loaded__ with two powerful tools:
+1. **SQLDatabaseToolkit:** Facilitates seamless query translation and efficient data retrieval from SQL databases.
+
+1. **PythonREPLTool:** Enables running Python code in a separate thread it is used to process data, allowing for advanced data manipulation and analysis.
 
 ## Database
-The Pagila database, a sample DVD rental database for PostgreSQL, is ideal for experimentation. To set it up using Docker, run the following command:
+The database used in this example is the __PostgreSQL Pagila database__, a sample __DVD rental__ database that is ideal for experimentation. To set it up using Docker, run the following command:
 ```bash
 sh run-pg-pagila-docker.sh pagila_postgresql_docker
 ```
-This script performs several actions:
-Builds the Docker container: Initializes the environment for running PostgreSQL.
-Downloads the Pagila database: Retrieves the necessary data and schema files.
-Instantiates the cluster: pre-configuration of the database.
+This script performs several actions : 
+1. **Builds the Docker container:** Initializes the environment for running PostgreSQL.
+2. **Downloads the Pagila database:** Retrieves the necessary data and schema files.
+3. **Instantiates the cluster:** pre-configuration of the database.
 
-connect to the Pagila database using the following command:
+Once the setup is finished connect to the Pagila database using the following command:
 ```bash
 psql -U postgres -d pagila
 ```
-create a new user role and grant him group permission :
+Create a new __user__ role and grant him __group permission__ :
 ```bash
-CREATE ROLE new_user; WITH LOGIN PASSWORD 'password';
+CREATE ROLE new_user WITH LOGIN PASSWORD 'password';
 GRANT pagila_dba TO new_user;
 ```
 ## Run the agent
 
-Claim Your API Key: First, obtain your API key from Groq and store it in .env file
+First, claim your API key from https://console.groq.com/keys and store it in the ```.env``` file.
 
 Run the Streamlit Application: 
 ```bash
 streamlit run main.py
 ```
 
-enter credentials to log in to the database.
+Then enter the created account credentials to log in to the database .
 
-Start Querying: Once logged in, you can begin querying the Groq API through the Streamlit interface.
-
+Once logged in, you can start querying.
 ## Results
+**The SQL Agent can :**
 
-The SQL Agent can:
-Answer Database-Related Questions: 
-Create and Save Plots
-Return SQL Statements
+1. **Answer Database-Related Questions** 
+    
+
+2. **Process, Create and Save Plots**
+
+3. **Return SQL Statements**
+
+__NB:__  To modify behavior or customize responses, visit the ```template.py``` file."
+
+These are some query responses showcasing prominent results with such technology in the future :
+<div style="display: flex; flex-direction: row; align-items: center;">
+    
+  <img src="demo/Screenshot2.png" alt="Screenshot1" width="400"/>    
+
+</div>
+<div style="display: flex; flex-direction: row; align-items: center;">
+
+  <img src="demo/rentals_per_month.png" alt="Audio 1 Waveform" width="400"/>
+
+</div>
+<div style="display: flex; flex-direction: row; align-items: center;">
+    
+  <img src="demo/Screenshot3.png" alt="Screenshot1" width="400"/>    
+
+</div>
+<div style="display: flex; flex-direction: row; align-items: center;">
+
+  <img src="demo/film_ratings.png" alt="Audio 1 Waveform" width="400"/>
+
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center;">
+    
+  <img src="demo/Screenshot1.png" alt="Screenshot1" width="400"/>    
+
+</div>
+<div style="display: flex; flex-direction: row; align-items: center;">
+
+  <img src="demo/total_customers_per_store.png" alt="Audio 1 Waveform" width="400"/>
+
+</div>
 
 
-To customize agent behavior, modify the template.py file.
+
 
 
 
