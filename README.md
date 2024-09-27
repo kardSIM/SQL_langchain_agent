@@ -56,33 +56,33 @@ __NB:__  To modify behavior or customize responses, visit the ```template.py``` 
 These are some query responses showcasing prominent results with such technology in the future :
 <div style="display: flex; flex-direction: row; align-items: center;">
     
-  <img src="demo/Screenshot2.png" alt="Screenshot1" width="400"/>    
+  <img src="demo/Screenshot2.png" alt="Screenshot1" width="700"/>    
 
 </div>
 <div style="display: flex; flex-direction: row; align-items: center;">
 
-  <img src="demo/rentals_per_month.png" alt="Audio 1 Waveform" width="400"/>
+  <img src="demo/rentals_per_month.png" alt="Audio 1 Waveform" width="700"/>
 
 </div>
 <div style="display: flex; flex-direction: row; align-items: center;">
     
-  <img src="demo/Screenshot3.png" alt="Screenshot1" width="400"/>    
+  <img src="demo/Screenshot3.png" alt="Screenshot1" width="700"/>    
 
 </div>
 <div style="display: flex; flex-direction: row; align-items: center;">
 
-  <img src="demo/film_ratings.png" alt="Audio 1 Waveform" width="400"/>
+  <img src="demo/film_ratings.png" alt="Audio 1 Waveform" width="700"/>
 
 </div>
 
 <div style="display: flex; flex-direction: row; align-items: center;">
     
-  <img src="demo/Screenshot1.png" alt="Screenshot1" width="400"/>    
+  <img src="demo/Screenshot1.png" alt="Screenshot1" width="700"/>    
 
 </div>
 <div style="display: flex; flex-direction: row; align-items: center;">
 
-  <img src="demo/total_customers_per_store.png" alt="Audio 1 Waveform" width="400"/>
+  <img src="demo/total_customers_per_store.png" alt="Audio 1 Waveform" width="700"/>
 
 </div>
 
