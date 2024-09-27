@@ -1,2 +1,8 @@
 streamlit
 langchain
+langchain-community
+langchain_groq
+langchain_experimental
+psycopg2-binary
+matplotlib
+pandas
