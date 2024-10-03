@@ -5,10 +5,13 @@ This __LangChain SQL Agent__ enables __intuitive interaction__ with SQL database
 ## Key Features 
 This agent Utilize the __Llama3-8B__ LLM model as its __reasoning engine__ and as __language generator__, enhancing the agent's ability to __understand__ and __process__ complex natural language queries.
 
-it also comes __pre-loaded__ with two powerful tools:
+it also comes __pre-loaded__ with three powerful tools:
 1. **SQLDatabaseToolkit:** Facilitates seamless query translation and efficient data retrieval from SQL databases.
 
-1. **PythonREPLTool:** Enables running Python code in a separate thread it is used to process data, allowing for advanced data manipulation and analysis.
+2. **PythonREPLTool:** Enables running Python code in a separate thread it is used to process data, allowing for advanced data manipulation and analysis.
+
+3. **FileManagementToolkit:** Allow Performing various file operations such as reading, writing, deleting, moving, and listing files.
+
 
 ## Database
 The database used in this example is the __PostgreSQL Pagila database__, a sample __DVD rental__ database that is ideal for experimentation. To set it up using Docker, run the following command:
@@ -46,10 +49,13 @@ Once logged in, you can start querying.
 
 1. **Answer Database-Related Questions** 
     
-
 2. **Process, Create and Save Plots**
 
-3. **Return SQL Statements**
+3. **Return code && SQL Statements**
+
+4. **Save output as text**
+
+5. **etc.**
 
 __NB:__  To modify behavior or customize responses, visit the ```template.py``` file."
 
